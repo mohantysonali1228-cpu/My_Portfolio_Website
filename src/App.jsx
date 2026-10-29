@@ -94,7 +94,7 @@ const ABOUT_STATS = [
   },
   {
     number: "04",
-    value: "3+",
+    value: "5+",
     title: "Core Projects",
     subtitle: "ML & Web Applications",
     accent: "#ec4899",

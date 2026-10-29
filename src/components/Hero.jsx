@@ -217,16 +217,16 @@ const Hero = () => {
 
             {/* Download CV */}
             <motion.a
-              href="D:\Downloads\sonali mohanty c.v.PDF"
-              download="Sonali-Mohanty-CV.pdf"
-              className="download-cv-icon"
-              aria-label="Download CV"
-              title="Download CV"
-              whileHover={{ y: -4, scale: 1.1 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <Download size={17} />
-            </motion.a>
+  href="/Sonali-CV.pdf"
+  download="Sonali-Mohanty-CV.pdf"
+  className="download-cv-icon"
+  aria-label="Download CV"
+  title="Download CV"
+  whileHover={{ y: -4, scale: 1.1 }}
+  whileTap={{ scale: 0.95 }}
+>
+  <Download size={17} />
+</motion.a>
           </motion.div>
         </div>
 
