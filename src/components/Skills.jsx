@@ -70,20 +70,6 @@ const SKILLS_DATA = [
     color: "#10B981",
     logoUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
   },
-  {
-  name: "React",
-  category: "Frontend Library",
-  color: "#61DAFB",
-  logoUrl:
-    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-},
-{
-name: "MongoDB",
-category: "Database",
-color: "#47A248",
-logoUrl:
-"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
-},
 ];
 
 // Stagger Animation Variants

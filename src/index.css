@@ -487,69 +487,85 @@ img {
   line-height: 1.9;
 }
 
-/* =========================================================
-   SKILLS
-========================================================= */
+
+/* ================= SKILLS GRID ================= */
 
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 1px;
-  margin-top: 65px;
-  overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.07);
-  border-radius: 14px;
-  background: rgba(255, 255, 255, 0.07);
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-auto-rows: 155px;
+  gap: 22px;
+
+  margin-top: 45px;
+  width: 100%;
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+
+  /* Remove Big Container */
+  overflow: visible;
+  border: none;
+  border-radius: 0;
+  background: transparent;
 }
 
-.skill-card {
+/* ================= SKILL CARD ================= */
+
+.skill-card-updated {
   position: relative;
-  min-height: 145px;
-  padding: 24px;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  padding: 28px 16px;
+
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  background: #0b0e13;
-  transition:
-    background 0.3s ease,
-    transform 0.3s ease;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+
+  backdrop-filter: blur(12px);
+  cursor: pointer;
+  overflow: hidden;
+  box-sizing: border-box;
 }
 
-.skill-card:hover {
-  background: #10151a;
-  transform: translateY(-3px);
+/* ================= TABLET ================= */
+
+@media (max-width: 1000px) {
+  .skills-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-auto-rows: 150px;
+  }
 }
 
-.skill-number {
-  color: #536071;
-  font-size: 11px;
-  font-weight: 700;
+/* ================= MOBILE ================= */
+
+@media (max-width: 650px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-auto-rows: 140px;
+    gap: 15px;
+    margin-top: 35px;
+  }
+
+  .skill-card-updated {
+    padding: 20px 12px;
+  }
 }
 
-.skill-name {
-  color: #dce2e9;
-  font-size: 17px;
-  font-weight: 600;
-}
+/* ================= SMALL MOBILE ================= */
 
-.skill-arrow {
-  position: absolute;
-  top: 23px;
-  right: 23px;
-  color: #8df4b4;
-  font-size: 18px;
-  opacity: 0;
-  transform: translate(-5px, 5px);
-  transition:
-    opacity 0.3s ease,
-    transform 0.3s ease;
+@media (max-width: 380px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-auto-rows: 130px;
+    gap: 12px;
+  }
 }
-
-.skill-card:hover .skill-arrow {
-  opacity: 1;
-  transform: translate(0, 0);
-}
-
 /* =========================================================
    EXPERIENCE (OPTIMIZED & UPGRADED)
 ========================================================= */
@@ -733,23 +749,30 @@ img {
    PROJECTS
 ========================================================= */
 
+/* ================= PROJECTS GRID ================= */
+
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 18px;
-  margin-top: 65px;
+  margin-top: 45px;
 }
+
+/* ================= PROJECT CARD ================= */
 
 .project-card {
   position: relative;
-  min-height: 390px;
-  padding: 30px;
+  min-height: 320px;
+  padding: 22px;
+
   display: flex;
   flex-direction: column;
+
   border: 1px solid rgba(255, 255, 255, 0.07);
   border-radius: 16px;
   background: #0d1117;
   overflow: hidden;
+
   transition:
     transform 0.35s ease,
     border-color 0.35s ease,
@@ -759,25 +782,27 @@ img {
 .project-card::before {
   content: "";
   position: absolute;
-  width: 180px;
-  height: 180px;
-  top: -100px;
-  right: -100px;
+  width: 150px;
+  height: 150px;
+  top: -80px;
+  right: -80px;
   border-radius: 50%;
   background: rgba(141, 244, 180, 0.07);
-  filter: blur(40px);
+  filter: blur(35px);
   transition: 0.4s ease;
 }
 
 .project-card:hover {
-  transform: translateY(-7px);
+  transform: translateY(-6px);
   border-color: rgba(141, 244, 180, 0.22);
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.3);
 }
 
 .project-card:hover::before {
   transform: scale(1.5);
 }
+
+/* Project Top */
 
 .project-top {
   display: flex;
@@ -786,42 +811,50 @@ img {
   color: #8df4b4;
   font-size: 10px;
   font-weight: 700;
-  letter-spacing: 1.5px;
+  letter-spacing: 1.3px;
 }
 
+/* Project Title */
+
 .project-card h3 {
-  margin-top: 55px;
+  margin-top: 35px;
   color: #eef2f7;
-  font-size: 26px;
+  font-size: 22px;
   font-weight: 600;
   letter-spacing: -0.5px;
 }
 
+/* Project Description */
+
 .project-card p {
-  margin-top: 17px;
+  margin-top: 12px;
   color: #727d8d;
-  font-size: 14px;
-  line-height: 1.8;
+  font-size: 13px;
+  line-height: 1.7;
 }
+
+/* Technologies */
 
 .project-tech {
   display: flex;
   flex-wrap: wrap;
   gap: 7px;
   margin-top: auto;
-  padding-top: 30px;
+  padding-top: 22px;
 }
 
 .project-tech span {
-  padding: 7px 9px;
+  padding: 6px 8px;
   border: 1px solid rgba(255, 255, 255, 0.07);
   border-radius: 5px;
   color: #737e8e;
   font-size: 10px;
 }
 
+/* Project Link */
+
 .project-link {
-  margin-top: 22px;
+  margin-top: 17px;
   color: #8df4b4;
   font-size: 12px;
   font-weight: 700;
@@ -832,6 +865,33 @@ img {
   transform: translateX(5px);
 }
 
+/* ================= TABLET ================= */
+
+@media (max-width: 1000px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 650px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    margin-top: 35px;
+  }
+
+  .project-card {
+    min-height: 290px;
+    padding: 20px;
+  }
+
+  .project-card h3 {
+    margin-top: 28px;
+    font-size: 20px;
+  }
+}
 /* =========================================================
    EDUCATION
 ========================================================= */
@@ -1414,4 +1474,18 @@ button:focus-visible {
     transition-duration: 0.01ms !important;
     animation-duration: 0.01ms !important;
   }
+}
+.project-image {
+  width: 100%;
+  height: 150px;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-bottom: 18px;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }

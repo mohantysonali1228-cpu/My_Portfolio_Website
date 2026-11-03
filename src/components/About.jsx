@@ -116,12 +116,12 @@ const About = () => {
             <span>01</span>
             ABOUT ME
           </div>
-
+{/* 
           <h2>
             Building with curiosity.
             <br />
             <span>Growing with every line of code.</span>
-          </h2>
+          </h2> */}
 
           <div className="about-heading-line" />
         </motion.div>

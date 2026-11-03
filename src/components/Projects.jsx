@@ -4,8 +4,6 @@ import { motion } from "framer-motion";
 import {
   ArrowUpRight,
   BrainCircuit,
-  Calculator,
-  Database,
   Github,
   Layers3,
   Terminal,
@@ -14,15 +12,12 @@ import {
   Building2,
 } from "lucide-react";
 
-// ================= ANIMATION VARIANTS =================
+// Animation variants
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
-    transition: {
-      staggerChildren: 0.15,
-      delayChildren: 0.1,
-    },
+    transition: { staggerChildren: 0.15, delayChildren: 0.1 },
   },
 };
 
@@ -32,140 +27,97 @@ const cardVariants = {
     opacity: 1,
     y: 0,
     scale: 1,
-    transition: {
-      type: "spring",
-      stiffness: 110,
-      damping: 14,
-    },
+    transition: { type: "spring", stiffness: 110, damping: 14 },
   },
 };
 
-const Projects = () => {
-  const projects = [
-    {
-      number: "01",
-      title: "Order Calculator",
-      category: "WEB APPLICATION",
-      description:
-        "A practical billing calculator that handles dynamic order quantities, discount calculations, and accurate final invoices.",
-      icon: Calculator,
-      accent: "#38bdf8",
-      featured: true,
-      imageUrl:
-        "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=700&auto=format&fit=crop&q=80",
-      technologies: ["JavaScript", "HTML5", "CSS3", "Logic Engine"],
-      highlights: [
-        "Dynamic order calculation",
-        "Clean user interface",
-        "Instant billing logic",
-      ],
-      github: "https://github.com/mohantysonali1228-cpu",
-      demo: "#",
-    },
-    {
-      number: "02",
-      title: "Student Project Management",
-      category: "CRUD APPLICATION",
-      description:
-        "A project management application built with a Python backend and SQL for managing student submissions and project data.",
-      icon: Database,
-      accent: "#6366f1",
-      featured: false,
-      imageUrl:
-        "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=700&auto=format&fit=crop&q=80",
-      technologies: ["Python", "REST API", "SQL", "CRUD"],
-      highlights: [
-        "GET and POST operations",
-        "Project data management",
-        "RESTful API architecture",
-      ],
-      github: "https://github.com/mohantysonali1228-cpu",
-      demo: "#",
-    },
-    {
-      number: "03",
-      title: "Titanic Survival Prediction",
-      category: "MACHINE LEARNING",
-      description:
-        "A machine learning model that analyzes passenger data and uses feature engineering to predict survival probabilities.",
-      icon: BrainCircuit,
-      accent: "#ec4899",
-      featured: false,
-      imageUrl:
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=700&auto=format&fit=crop&q=80",
-      technologies: [
-        "Python",
-        "Machine Learning",
-        "Pandas",
-        "Scikit-Learn",
-      ],
-      highlights: [
-        "Dataset feature analysis",
-        "Predictive classification",
-        "Data visualization",
-      ],
-      github: "https://github.com/mohantysonali1228-cpu",
-      demo: "#",
-    },
-    {
-      number: "04",
-      title: "Blinkit Grocery Website",
-      category: "E-COMMERCE WEBSITE",
-      description:
-        "A Blinkit-inspired grocery shopping website where users can explore grocery products, browse categories, add products to their cart, and manage their shopping experience.",
-      icon: ShoppingBasket,
-      accent: "#84cc16",
-      featured: false,
-      imageUrl:
-        "https://images.unsplash.com/photo-1542838132-92c53300491e?w=700&auto=format&fit=crop&q=80",
-      technologies: [
-        "HTML5",
-        "Tailwind CSS",
-        "JavaScript",
-        "LocalStorage",
-      ],
-      highlights: [
-        "Product categories and listings",
-        "Add-to-cart and cart management",
-        "Login and registration interface",
-      ],
-      github: "https://github.com/mohantysonali1228-cpu",
-      demo: "#",
-    },
-    {
-      number: "05",
-      title: "Real Estate Website",
-      category: "REAL ESTATE WEB APPLICATION",
-      description:
-        "A modern and responsive real estate website designed to showcase properties, provide property information, and help users explore available real estate listings.",
-      icon: Building2,
-      accent: "#f59e0b",
-      featured: false,
-      imageUrl:
-        "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=700&auto=format&fit=crop&q=80",
-      technologies: [
-        "React",
-        "JavaScript",
-        "Tailwind CSS",
-        "Responsive UI",
-      ],
-      highlights: [
-        "Property listing showcase",
-        "Property and agent sections",
-        "Responsive website design",
-      ],
-      github: "https://github.com/mohantysonali1228-cpu",
-      demo: "#",
-    },
-  ];
+// Replace these GitHub profile URLs with the exact repository URLs.
+const GITHUB_PROFILE = "https://github.com/mohantysonali1228-cpu";
 
+const projects = [
+  {
+    number: "01",
+    title: "Blinkit Grocery Website",
+    category: "E-COMMERCE WEBSITE",
+    description:
+      "A Blinkit-inspired grocery shopping website where users can explore grocery products, browse categories, add products to their cart, and manage their shopping experience.",
+    icon: ShoppingBasket,
+    accent: "#84cc16",
+    imageUrl:
+      "https://images.unsplash.com/photo-1542838132-92c53300491e?w=700&auto=format&fit=crop&q=80",
+    technologies: [
+      "HTML5",
+      "Tailwind CSS",
+      "JavaScript",
+      "LocalStorage",
+    ],
+    highlights: [
+      "Product categories and listings",
+      "Add-to-cart and cart management",
+      "Login and registration interface",
+    ],
+    // github:"https://github.com/mohantysonali1228-cpu/Grocery_-Delivery-_Website-",
+    demo: "https://grocery-delivery-website-vqc2.vercel.app/",
+  },
+  {
+    number: "02",
+    title: "Real Estate Website",
+    category: "REAL ESTATE WEB APPLICATION",
+    description:
+      "A modern and responsive real estate website designed to showcase properties, provide property information, and help users explore available real estate listings.",
+    icon: Building2,
+    accent: "#f59e0b",
+    imageUrl:
+      "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=700&auto=format&fit=crop&q=80",
+    technologies: [
+      "React",
+      "JavaScript",
+      "Tailwind CSS",
+      "Responsive UI",
+    ],
+    highlights: [
+      "Property listing showcase",
+      "Property and agent sections",
+      "Responsive website design",
+    ],
+    github: GITHUB_PROFILE,
+    demo: null,
+  },
+  {
+    number: "03",
+    title: "AI Resume Builder",
+    category: "AI-POWERED WEB APPLICATION",
+    description:
+      "An AI-powered resume builder that helps users create professional and ATS-friendly resumes. Users can enter personal details, education, skills, and work experience to generate and enhance resume content.",
+    icon: BrainCircuit,
+    accent: "#a855f7",
+    imageUrl:
+      "https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=700&auto=format&fit=crop&q=80",
+    technologies: [
+      "React",
+      "Tailwind CSS",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "AI Integration",
+    ],
+    highlights: [
+      "AI-powered resume content enhancement",
+      "ATS-friendly resume generation",
+      "Resume details and PDF support",
+    ],
+    github: GITHUB_PROFILE,
+    demo: null,
+  },
+];
+
+const Projects = () => {
   return (
     <section id="projects" className="projects-section">
-      {/* Background Grid */}
       <div className="projects-grid-bg" />
 
       <div className="projects-container">
-        {/* ================= HEADER ================= */}
+        {/* Header */}
         <motion.div
           className="projects-header"
           initial={{ opacity: 0, y: 30 }}
@@ -181,7 +133,7 @@ const Projects = () => {
           <div className="projects-heading-content">
             <div>
               <h2>
-                Things I&apos;ve
+                Things I've
                 <br />
                 <span>built with purpose.</span>
               </h2>
@@ -195,7 +147,7 @@ const Projects = () => {
           </div>
         </motion.div>
 
-        {/* ================= PROJECTS LIST ================= */}
+        {/* Project Cards */}
         <motion.div
           className="projects-list"
           variants={containerVariants}
@@ -214,10 +166,8 @@ const Projects = () => {
 
             return (
               <motion.article
-                className={`project-card ${
-                  project.featured ? "project-featured" : ""
-                }`}
-                key={project.title}
+                key={project.number}
+                className="project-card"
                 variants={cardVariants}
                 whileHover={{
                   y: -10,
@@ -230,11 +180,10 @@ const Projects = () => {
                   display: "flex",
                   flexDirection: "column",
                   borderRadius: "24px",
-                  background: "rgba(255, 255, 255, 0.03)",
-                  border: "1px solid rgba(255, 255, 255, 0.09)",
+                  background: "rgba(255,255,255,0.03)",
+                  border: "1px solid rgba(255,255,255,0.09)",
                   backdropFilter: "blur(14px)",
                   overflow: "hidden",
-                  transition: "border-color 0.3s ease",
                 }}
               >
                 {/* Background Glow */}
@@ -253,32 +202,28 @@ const Projects = () => {
                   }}
                 />
 
-                {/* Project Image */}
+                {/* Image */}
                 <div
                   style={{
                     position: "relative",
                     width: "100%",
                     height: "190px",
                     overflow: "hidden",
-                    borderBottom:
-                      "1px solid rgba(255, 255, 255, 0.08)",
+                    borderBottom: "1px solid rgba(255,255,255,0.08)",
                   }}
                 >
                   <motion.img
                     src={project.imageUrl}
                     alt={project.title}
                     whileHover={{ scale: 1.1 }}
-                    transition={{
-                      duration: 0.5,
-                      ease: "easeOut",
-                    }}
+                    transition={{ duration: 0.5 }}
+                    loading="lazy"
                     style={{
                       width: "100%",
                       height: "100%",
                       objectFit: "cover",
                       filter: "brightness(0.85) contrast(1.1)",
                     }}
-                    loading="lazy"
                   />
 
                   <div
@@ -286,11 +231,10 @@ const Projects = () => {
                       position: "absolute",
                       inset: 0,
                       background:
-                        "linear-gradient(to top, rgba(10,10,15,0.9) 0%, transparent 65%)",
+                        "linear-gradient(to top, rgba(10,10,15,0.9), transparent 65%)",
                     }}
                   />
 
-                  {/* Project Number and Icon */}
                   <div
                     style={{
                       position: "absolute",
@@ -300,7 +244,6 @@ const Projects = () => {
                       display: "flex",
                       justifyContent: "space-between",
                       alignItems: "center",
-                      zIndex: 2,
                     }}
                   >
                     <span
@@ -311,7 +254,6 @@ const Projects = () => {
                         padding: "4px 10px",
                         borderRadius: "8px",
                         background: "rgba(0,0,0,0.65)",
-                        backdropFilter: "blur(8px)",
                         color: project.accent,
                         border: `1px solid ${project.accent}40`,
                       }}
@@ -325,13 +267,10 @@ const Projects = () => {
                         height: "36px",
                         borderRadius: "10px",
                         background: "rgba(0,0,0,0.65)",
-                        backdropFilter: "blur(8px)",
                         display: "flex",
                         alignItems: "center",
                         justifyContent: "center",
                         color: project.accent,
-                        border:
-                          "1px solid rgba(255,255,255,0.12)",
                       }}
                     >
                       <Icon size={18} />
@@ -339,7 +278,7 @@ const Projects = () => {
                   </div>
                 </div>
 
-                {/* ================= CARD CONTENT ================= */}
+                {/* Card Content */}
                 <div
                   style={{
                     padding: "24px 22px 20px",
@@ -356,7 +295,6 @@ const Projects = () => {
                         fontSize: "0.72rem",
                         fontWeight: 700,
                         letterSpacing: "1.2px",
-                        textTransform: "uppercase",
                         color: project.accent,
                         marginBottom: "6px",
                       }}
@@ -441,8 +379,7 @@ const Projects = () => {
                             borderRadius: "8px",
                             background: "rgba(255,255,255,0.04)",
                             color: "rgba(255,255,255,0.85)",
-                            border:
-                              "1px solid rgba(255,255,255,0.08)",
+                            border: "1px solid rgba(255,255,255,0.08)",
                           }}
                         >
                           {tech}
@@ -450,26 +387,22 @@ const Projects = () => {
                       ))}
                     </div>
 
-                    {/* Action Links */}
+                    {/* Links */}
                     <div
                       style={{
                         display: "flex",
                         alignItems: "center",
                         justifyContent: "space-between",
                         gap: "12px",
-                        borderTop:
-                          "1px solid rgba(255,255,255,0.08)",
+                        borderTop: "1px solid rgba(255,255,255,0.08)",
                         paddingTop: "14px",
                       }}
                     >
                       <motion.a
                         href={project.github}
                         target="_blank"
-                        rel="noreferrer"
-                        whileHover={{
-                          scale: 1.05,
-                          color: "#FFFFFF",
-                        }}
+                        rel="noopener noreferrer"
+                        whileHover={{ scale: 1.05, color: "#FFFFFF" }}
                         whileTap={{ scale: 0.95 }}
                         style={{
                           display: "inline-flex",
@@ -482,31 +415,42 @@ const Projects = () => {
                         }}
                       >
                         <Github size={16} />
-                        <span>Code</span>
+                        Code
                       </motion.a>
 
-                      <motion.a
-                        href={project.demo}
-                        target="_blank"
-                        rel="noreferrer"
-                        whileHover={{
-                          scale: 1.05,
-                          color: project.accent,
-                        }}
-                        whileTap={{ scale: 0.95 }}
-                        style={{
-                          display: "inline-flex",
-                          alignItems: "center",
-                          gap: "6px",
-                          fontSize: "0.88rem",
-                          fontWeight: 600,
-                          color: project.accent,
-                          textDecoration: "none",
-                        }}
-                      >
-                        <span>Live Preview</span>
-                        <ArrowUpRight size={16} />
-                      </motion.a>
+                      {project.demo ? (
+                        <a
+                          href={project.demo}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          whileHover={{
+                            scale: 1.05,
+                            color: project.accent,
+                          }}
+                          whileTap={{ scale: 0.95 }}
+                          style={{
+                            display: "inline-flex",
+                            alignItems: "center",
+                            gap: "6px",
+                            fontSize: "0.88rem",
+                            fontWeight: 600,
+                            color: project.accent,
+                            textDecoration: "none",
+                          }}
+                        >
+                          Live Preview
+                          <ArrowUpRight size={16} />
+                        </a>
+                      ) : (
+                        <span
+                          style={{
+                            fontSize: "0.82rem",
+                            color: "rgba(255,255,255,0.35)",
+                          }}
+                        >
+                          Coming Soon
+                        </span>
+                      )}
                     </div>
                   </div>
                 </div>
@@ -515,7 +459,7 @@ const Projects = () => {
           })}
         </motion.div>
 
-        {/* ================= PROJECT STATS ================= */}
+        {/* Project Statistics */}
         <motion.div
           className="project-stats"
           initial={{ opacity: 0, y: 25 }}
@@ -530,143 +474,43 @@ const Projects = () => {
             borderRadius: "20px",
             background: "rgba(255,255,255,0.02)",
             border: "1px solid rgba(255,255,255,0.08)",
-            backdropFilter: "blur(12px)",
             marginBottom: "3rem",
           }}
         >
-          {/* Completed Projects */}
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              gap: "14px",
-            }}
-          >
-            <div
-              style={{
-                width: "42px",
-                height: "42px",
-                borderRadius: "12px",
-                background: "rgba(56,189,248,0.15)",
-                color: "#38bdf8",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-              }}
-            >
+          {/* Projects */}
+          <div style={statStyle}>
+            <div style={iconStyle("#38bdf8")}>
               <Terminal size={20} />
             </div>
             <div>
-              <strong
-                style={{
-                  display: "block",
-                  fontSize: "1.35rem",
-                  fontWeight: 800,
-                  color: "#FFFFFF",
-                }}
-              >
-                05+
-              </strong>
-              <span
-                style={{
-                  fontSize: "0.8rem",
-                  color: "rgba(255,255,255,0.5)",
-                }}
-              >
-                Projects Showcased
-              </span>
+              <strong style={statNumberStyle}>03+</strong>
+              <span style={statLabelStyle}>Projects Showcased</span>
             </div>
           </div>
 
-          {/* Technology Domains */}
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              gap: "14px",
-            }}
-          >
-            <div
-              style={{
-                width: "42px",
-                height: "42px",
-                borderRadius: "12px",
-                background: "rgba(99,102,241,0.15)",
-                color: "#6366f1",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-              }}
-            >
+          {/* Technology Areas */}
+          <div style={statStyle}>
+            <div style={iconStyle("#6366f1")}>
               <Layers3 size={20} />
             </div>
             <div>
-              <strong
-                style={{
-                  display: "block",
-                  fontSize: "1.35rem",
-                  fontWeight: 800,
-                  color: "#FFFFFF",
-                }}
-              >
-                05+
-              </strong>
-              <span
-                style={{
-                  fontSize: "0.8rem",
-                  color: "rgba(255,255,255,0.5)",
-                }}
-              >
-                Technology Areas
-              </span>
+              <strong style={statNumberStyle}>05+</strong>
+              <span style={statLabelStyle}>Technology Areas</span>
             </div>
           </div>
 
-          {/* Machine Learning */}
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              gap: "14px",
-            }}
-          >
-            <div
-              style={{
-                width: "42px",
-                height: "42px",
-                borderRadius: "12px",
-                background: "rgba(236,72,153,0.15)",
-                color: "#ec4899",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-              }}
-            >
+          {/* ML Model */}
+          <div style={statStyle}>
+            <div style={iconStyle("#ec4899")}>
               <BrainCircuit size={20} />
             </div>
             <div>
-              <strong
-                style={{
-                  display: "block",
-                  fontSize: "1.35rem",
-                  fontWeight: 800,
-                  color: "#FFFFFF",
-                }}
-              >
-                01
-              </strong>
-              <span
-                style={{
-                  fontSize: "0.8rem",
-                  color: "rgba(255,255,255,0.5)",
-                }}
-              >
-                ML Model
-              </span>
+              <strong style={statNumberStyle}>01</strong>
+              <span style={statLabelStyle}>ML Model</span>
             </div>
           </div>
 
-          {/* Banner Text */}
+          {/* Banner */}
           <div
             style={{
               display: "flex",
@@ -674,34 +518,23 @@ const Projects = () => {
               justifyContent: "space-between",
               gap: "10px",
               paddingLeft: "10px",
-              borderLeft:
-                "1px solid rgba(255,255,255,0.08)",
+              borderLeft: "1px solid rgba(255,255,255,0.08)",
             }}
           >
-            <span
-              style={{
-                fontSize: "0.88rem",
-                fontWeight: 600,
-                color: "#38bdf8",
-              }}
-            >
+            <span style={{ fontSize: "0.88rem", fontWeight: 600, color: "#38bdf8" }}>
               Always building new ideas
             </span>
-            <Sparkles
-              size={18}
-              style={{ color: "#38bdf8", flexShrink: 0 }}
-            />
+            <Sparkles size={18} style={{ color: "#38bdf8" }} />
           </div>
         </motion.div>
 
-        {/* ================= CTA BANNER ================= */}
+        {/* CTA */}
         <motion.div
           className="projects-cta"
           initial={{ opacity: 0, scale: 0.96 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          whileHover={{ scale: 1.01 }}
           style={{
             display: "flex",
             justifyContent: "space-between",
@@ -711,9 +544,8 @@ const Projects = () => {
             padding: "32px 30px",
             borderRadius: "22px",
             background:
-              "linear-gradient(135deg, rgba(99,102,241,0.08) 0%, rgba(56,189,248,0.05) 100%)",
+              "linear-gradient(135deg, rgba(99,102,241,0.08), rgba(56,189,248,0.05))",
             border: "1px solid rgba(99,102,241,0.25)",
-            backdropFilter: "blur(16px)",
           }}
         >
           <div>
@@ -723,7 +555,6 @@ const Projects = () => {
                 fontWeight: 700,
                 letterSpacing: "1.2px",
                 color: "#38bdf8",
-                textTransform: "uppercase",
               }}
             >
               HAVE A PROJECT IDEA?
@@ -737,7 +568,7 @@ const Projects = () => {
                 marginTop: "4px",
               }}
             >
-              Let&apos;s build something impactful together.
+              Let's build something impactful together.
             </h3>
           </div>
 
@@ -751,14 +582,11 @@ const Projects = () => {
               gap: "8px",
               padding: "12px 24px",
               borderRadius: "999px",
-              background:
-                "linear-gradient(135deg, #6366f1, #38bdf8)",
+              background: "linear-gradient(135deg, #6366f1, #38bdf8)",
               color: "#FFFFFF",
               fontWeight: 600,
               textDecoration: "none",
               fontSize: "0.95rem",
-              boxShadow:
-                "0 10px 25px -6px rgba(99,102,241,0.5)",
             }}
           >
             Start a conversation
@@ -768,6 +596,36 @@ const Projects = () => {
       </div>
     </section>
   );
+};
+
+// Reusable statistics styles
+const statStyle = {
+  display: "flex",
+  alignItems: "center",
+  gap: "14px",
+};
+
+const iconStyle = (color) => ({
+  width: "42px",
+  height: "42px",
+  borderRadius: "12px",
+  background: `${color}26`,
+  color,
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+});
+
+const statNumberStyle = {
+  display: "block",
+  fontSize: "1.35rem",
+  fontWeight: 800,
+  color: "#FFFFFF",
+};
+
+const statLabelStyle = {
+  fontSize: "0.8rem",
+  color: "rgba(255,255,255,0.5)",
 };
 
 export default Projects;
