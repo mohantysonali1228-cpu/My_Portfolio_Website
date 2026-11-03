@@ -537,7 +537,7 @@ function App() {
               transition={{ duration: 0.75 }}
             >
               <p className="large-text" style={{ marginBottom: "1.0rem", fontWeight: 500 }}>
-                I'm an <span style={{ color: "#38bdf8", fontWeight: 400 }}>MCA Computer Science student</span>  interested in Python full-stack development and AI/ML. I enjoy learning new technologies and creating practical projects.
+                I'm an <span style={{ color: "#38bdf8", fontWeight: 400 }}>MCA Computer Science student</span>  interested in Python full-stack development. I enjoy learning new technologies and creating practical projects.
               </p>
               {/* <p className="normal-text" style={{ marginBottom: "1rem" }}>
                 My technical journey is centered around developing scalable backend logic, crafting intuitive web experiences, and architecting reliable CRUD APIs. I combine structured computer science foundations with hands-on internship experience.
