@@ -1019,9 +1019,10 @@ img {
    CONTACT
 ========================================================= */
 
+
 .contact-section {
   position: relative;
-  padding: 170px 7% 130px;
+  padding: 45px 7% 130px;
   background:
     radial-gradient(
       circle at 50% 70%,
@@ -1060,37 +1061,66 @@ img {
   pointer-events: none;
 }
 
-.contact-container {
+/* MAIN SIDE-BY-SIDE LAYOUT */
+#contact .contact-container {
   position: relative;
   z-index: 2;
-  text-align: center;
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+
+  display: grid !important;
+  grid-template-columns: 180px minmax(0, 1fr);
+  grid-template-areas:
+    "label heading"
+    ". description"
+    ". button"
+    ". details";
+
+  column-gap: 50px;
+  row-gap: 0;
+  align-items: start;
+  text-align: left !important;
 }
 
-.contact-container .section-label {
-  justify-content: center;
+/* LEFT LABEL */
+#contact .contact-container > .section-label {
+  grid-area: label;
+  justify-content: flex-start !important;
+  text-align: left !important;
+  margin-top: 12px;
+  white-space: nowrap;
 }
 
-.contact-heading {
-  margin-top: 25px;
+/* RIGHT CONTENT */
+
+  #contact .contact-heading {
+  grid-area: heading;
+  margin-top: 50px !important; /* heading ku talaku neba */
   color: #eef2f7;
   font-size: clamp(55px, 8vw, 105px);
   line-height: 0.95;
   letter-spacing: -5px;
+  text-align: left;
 }
 
 .contact-heading span {
   color: #8df4b4;
 }
 
-.contact-description {
+#contact .contact-description {
+  grid-area: description;
   max-width: 620px;
-  margin: 30px auto 0;
+  margin: 30px 0 0;
   color: #707b8b;
   font-size: 15px;
   line-height: 1.9;
+  text-align: left;
 }
 
-.email-button {
+#contact .email-button {
+  grid-area: button;
+  justify-self: start;
   display: inline-flex;
   align-items: center;
   gap: 18px;
@@ -1115,13 +1145,15 @@ img {
   font-size: 18px;
 }
 
-.contact-details {
+#contact .contact-details {
+  grid-area: details;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start !important;
   flex-wrap: wrap;
   gap: 20px;
   margin-top: 45px;
+  text-align: left;
 }
 
 .contact-details a {
@@ -1133,6 +1165,46 @@ img {
 .contact-details a:hover {
   color: #8df4b4;
 }
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 650px) {
+  .contact-section {
+    padding: 120px 5% 90px;
+  }
+
+  #contact .contact-container {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "label"
+      "heading"
+      "description"
+      "button"
+      "details";
+    row-gap: 20px;
+  }
+
+  #contact .contact-heading {
+    font-size: clamp(45px, 12vw, 65px);
+    letter-spacing: -3px;
+  }
+
+  #contact .contact-description {
+    margin-top: 0;
+    font-size: 14px;
+  }
+
+  #contact .email-button {
+    margin-top: 5px;
+  }
+
+  #contact .contact-details {
+    flex-direction: column;
+    align-items: flex-start !important;
+    gap: 15px !important;
+    margin-top: 15px;
+  }
+}
+
 
 /* =========================================================
    FOOTER
@@ -1488,4 +1560,77 @@ button:focus-visible {
   height: 100%;
   object-fit: cover;
   display: block;
+}
+
+
+
+/* =========================================================
+   PROJECTS & CONTACT SECTION GAP FIX
+========================================================= */
+
+/* Projects section */
+#projects {
+  padding-bottom: 45px !important;
+  margin-bottom: 0 !important;
+}
+
+/* Contact section */
+#contact.contact-section {
+  padding-top: 45px !important;
+  margin-top: 0 !important;
+}
+
+/* Remove extra spacing */
+#projects .projects-grid {
+  margin-bottom: 0 !important;
+}
+
+#contact .contact-container {
+  margin-top: 0 !important;
+}
+
+/* Mobile responsive */
+@media (max-width: 650px) {
+  #projects {
+    padding-bottom: 35px !important;
+  }
+
+  #contact.contact-section {
+    padding-top: 35px !important;
+  }
+}
+/* HERO BUTTONS */
+.hero-buttons {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+/* DOWNLOAD CV */
+.download-cv-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 22px;
+  border-radius: 9999px;
+  background: rgba(16, 185, 129, 0.12);
+  border: 1px solid rgba(16, 185, 129, 0.4);
+  color: #10b981;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.download-cv-btn:hover {
+  background: rgba(16, 185, 129, 0.22);
+}
+
+@media (max-width: 480px) {
+  .hero-buttons {
+    gap: 10px;
+  }
 }
