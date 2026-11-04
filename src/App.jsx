@@ -252,7 +252,7 @@ const PROJECTS_DATA = [
     description:
       "A grocery shopping website with product categories, a shopping cart, and login and registration interfaces.",
     tech: ["HTML", "Tailwind CSS", "JavaScript", "LocalStorage"],
-    image: "/images/a_clean_modern_grocery_delivery_concept_illustrat.png",
+    image: "/images/Screenshot 2026-11-04 132621.png",
     link: "https://grocery-delivery-website-one.vercel.app/",
   },
   {
@@ -262,7 +262,7 @@ const PROJECTS_DATA = [
     description:
       "A responsive property website showcasing real estate listings, property information, and agent sections.",
     tech: ["React", "JavaScript", "Tailwind CSS"],
-    image: "/images/image.png",
+    image: "/images/Screenshot 2026-11-04 131938.png",
     link: "https://animated-biscochitos-b9ee58.netlify.app/",
   },
   {
@@ -272,8 +272,8 @@ const PROJECTS_DATA = [
   description:
     "An AI-powered resume builder that helps users create professional, ATS-friendly resumes with AI-enhanced summaries and skills.",
   tech: ["React", "Node.js", "Express.js", "MongoDB", "AI"],
-  image: "/images/AI Resume Builder Dashboard.png",
-  link: "https://github.com/mohantysonali1228-cpu",
+  image: "/images/Screenshot 2026-11-04 131329.png",
+  link: "https://ai-resume-builder-two-beta.vercel.app/",
 },
 ];
 
