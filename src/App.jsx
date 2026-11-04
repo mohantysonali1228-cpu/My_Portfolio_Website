@@ -969,7 +969,7 @@ function App() {
           viewport={{ once: true, amount: 0.3 }}
           variants={fadeInUp}
         >
-          <div className="section-label">07 — CONTACT</div>
+          <div className="section-label">06 — CONTACT</div>
           <h2 className="contact-heading">
             Let's build<br /><span>something great.</span>
           </h2>
