@@ -296,6 +296,23 @@ const PROJECTS_DATA = [
     image: "/images/Screenshot 2026-11-04 131329.png",
     link: "https://ai-resume-builder-two-beta.vercel.app/",
   },
+ {
+  number: "04",
+  title: "Meesho Shopping Website",
+  category: "FULL STACK / E-COMMERCE",
+  description:
+    "A Meesho-inspired online shopping website that allows users to browse products, search items, manage their cart and wishlist, and place orders with a smooth and user-friendly shopping experience.",
+  tech: [
+    "React",
+    "JavaScript",
+    "Tailwind CSS",
+    "React Router DOM",
+    "Lucide React",
+    "LocalStorage"
+  ],
+  image: "/images/Screenshot 2026-11-11 153732.png",
+  link: "https://meesho-shopping-website.vercel.app/",
+},
 ];
 
 // ================= MAIN APP COMPONENT =================
