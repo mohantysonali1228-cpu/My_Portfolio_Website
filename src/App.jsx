@@ -436,7 +436,7 @@ function App() {
               </motion.a>
 
               <motion.a
-                href="https://www.linkedin.com/in/sonali-mohanty-7b"
+                href="https://www.linkedin.com/in/sonali-mohanty-7b18a7371/"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -1346,7 +1346,7 @@ function App() {
             </a>
 
             <motion.a
-              href="https://www.linkedin.com/in/sonali-mohanty-7b"
+              href="https://www.linkedin.com/in/sonali-mohanty-7b18a7371/"
               target="_blank"
               rel="noreferrer"
               style={{
