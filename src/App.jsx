@@ -85,7 +85,7 @@ const ABOUT_STATS = [
     value: "MCA",
     title: "Computer Science",
     subtitle: "GITAM, Bhubaneswar",
-    accent: "#6366f1",
+    accent: "#38bdf8",
     icon: GraduationCap,
   },
   {
@@ -101,15 +101,15 @@ const ABOUT_STATS = [
     value: "2+",
     title: "Internships",
     subtitle: "Python & Data Science",
-    accent: "#10b981",
+    accent: "#38bdf8",
     icon: Code2,
   },
   {
     number: "04",
-    value: "3+",
+    value: "4+",
     title: "Core Projects",
     subtitle: "ML & Web Applications",
-    accent: "#ec4899",
+    accent: "#38bdf8",
     icon: BrainCircuit,
   },
 ];
@@ -179,39 +179,40 @@ const SKILLS_DATA = [
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
   },
   {
-    name: "SQL",
-    category: "Database",
-    color: "#336791",
-    logoUrl:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
-  },
-  {
     name: "React",
     category: "Frontend Library",
     color: "#61DAFB",
     logoUrl:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
   },
+ 
+  // {
+  //   name: "GitHub",
+  //   category: "Repository",
+  //   color: "#FFFFFF",
+  //   logoUrl:
+  //     "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
+  // },
+  // {
+  //   name: "VS Code",
+  //   category: "IDE / Editor",
+  //   color: "#007ACC",
+  //   logoUrl:
+  //     "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg",
+  // },
   {
-    name: "GitHub",
-    category: "Repository",
-    color: "#FFFFFF",
-    logoUrl:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
-  },
-  {
-    name: "VS Code",
-    category: "IDE / Editor",
-    color: "#007ACC",
-    logoUrl:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg",
-  },
-  {
-    name: "Machine Learning",
+    name: "ML",
     category: "Data Science",
     color: "#150458",
     logoUrl:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg",
+  },
+   {
+    name: "SQL",
+    category: "Database",
+    color: "#336791",
+    logoUrl:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqEtKD-SuIhbRvQo3NVndUkt1j8_SLc5xpEOl3LD2bdvPs1kHkC2E7nOk&s=10",
   },
   {
     name: "MongoDB",
@@ -537,7 +538,7 @@ function App() {
             >
               <p
                 className="large-text"
-                style={{ marginBottom: "1rem", fontWeight: 500 }}
+                style={{ marginBottom: "1rem", fontWeight: 300 }}
               >
                 I'm an{" "}
                 <span style={{ color: "#38bdf8", fontWeight: 400 }}>
@@ -619,7 +620,7 @@ function App() {
                   >
                     <GraduationCap
                       size={14}
-                      style={{ color: "#6366f1" }}
+                      style={{ color: "#38bdf8" }}
                     />
                     MCA
                     {/* MCA (2025–27) */}
@@ -654,7 +655,7 @@ function App() {
                       gap: "6px",
                     }}
                   >
-                    <Terminal size={14} style={{ color: "#10b981" }} />
+                    <Terminal size={14} style={{ color: "#38bdf8" }} />
                     Python Full Stack
                   </strong>
                 </div>
