@@ -406,7 +406,7 @@ function App() {
               {/* DOWNLOAD CV BUTTON */}
 
               <motion.a
-                href="/Sonali-CV.pdf"
+                href="/Sonali_Mohanty_CV.pdf"
                 download="Sonali-Mohanty-CV.pdf"
                 aria-label="Download CV"
                 title="Download CV"
@@ -414,8 +414,10 @@ function App() {
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.98 }}
               >
-                <Download size={20} />
+                {/* <Download size={20} /> */}
                 <span>Download CV</span>
+                <Download size={20} />
+
               </motion.a>
             </motion.div>
 
@@ -541,8 +543,7 @@ function App() {
                 <span style={{ color: "#38bdf8", fontWeight: 400 }}>
                   MCA Computer Science student
                 </span>{" "}
-                interested in Python full-stack development. I enjoy learning
-                new technologies and creating practical projects.
+                interested in Python fullstack development. I enjoy building modern, responsive, and user-friendly web applications. I have a strong interest in Python development, frontend technologies, backend development and databases.
               </p>
 
               {/* SPECS BADGES */}
@@ -620,7 +621,8 @@ function App() {
                       size={14}
                       style={{ color: "#6366f1" }}
                     />
-                    MCA (2025–27)
+                    MCA
+                    {/* MCA (2025–27) */}
                   </strong>
                 </div>
 
@@ -1288,95 +1290,80 @@ function App() {
 
       {/* ================= 7. CONTACT SECTION ================= */}
 
-      <section id="contact" className="contact-section">
-        <div className="contact-glow"></div>
+      
+<section id="contact" className="contact-section">
+  <div className="contact-glow"></div>
 
-        <motion.div
-          className="section-container contact-container"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
-          variants={fadeInUp}
-        >
-          <div className="section-label">06 — CONTACT</div>
+  <motion.div
+    className="section-container contact-container"
+    initial="hidden"
+    whileInView="visible"
+    viewport={{ once: true, amount: 0.3 }}
+    variants={fadeInUp}
+  >
+    {/* LEFT LABEL */}
+    <div className="section-label">06 — CONTACT</div>
 
-          <h2 className="contact-heading">
-            Let's build
-            <br />
-            <span>something great.</span>
-          </h2>
+    {/* RIGHT HEADING */}
+    <h2 className="contact-heading">
+      Let's build
+      <br />
+      <span>something great.</span>
+    </h2>
 
-          <p className="contact-description">
-            I'm open to software engineering opportunities, internships,
-            collaborations and interesting development projects.
-          </p>
+    {/* DESCRIPTION - LEFT SIDE */}
+    <p className="contact-description">
+      I'm open to software engineering opportunities, internships,
+      collaborations and interesting development projects.
+    </p>
 
-          <motion.a
-            href="mailto:mohantysonali1228@gmail.com"
-            className="email-button"
-            whileHover={{ scale: 1.05, y: -2 }}
-            whileTap={{ scale: 0.98 }}
-          >
-            Start a conversation <span>↗</span>
-          </motion.a>
+    {/* EMAIL BUTTON - LEFT SIDE */}
+    <motion.a
+      href="mailto:mohantysonali1228@gmail.com"
+      className="email-button"
+      whileHover={{ scale: 1.05, y: -2 }}
+      whileTap={{ scale: 0.98 }}
+    >
+      Start a conversation <span>↗</span>
+    </motion.a>
 
-          {/* SOCIAL LINKS & MAIL */}
+    {/* SOCIAL LINKS & MAIL - LEFT SIDE */}
+    <div className="contact-details">
 
-          <div
-            className="contact-details"
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              gap: "24px",
-              flexWrap: "wrap",
-              marginTop: "2rem",
-            }}
-          >
-            <a
-              href="mailto:mohantysonali1228@gmail.com"
-              style={{
-                display: "inline-flex",
-                alignItems: "center",
-                gap: "8px",
-              }}
-            >
-              <MailIcon />
-              mohantysonali1228@gmail.com
-            </a>
+      <a
+        href="mailto:mohantysonali1228@gmail.com"
+        className="contact-link"
+      >
+        <MailIcon />
+        mohantysonali1228@gmail.com
+      </a>
 
-            <motion.a
-              href="https://www.linkedin.com/in/sonali-mohanty-7b18a7371/"
-              target="_blank"
-              rel="noreferrer"
-              style={{
-                display: "inline-flex",
-                alignItems: "center",
-                gap: "8px",
-              }}
-              whileHover={{ y: -3, scale: 1.05 }}
-            >
-              <LinkedInIcon />
-              LinkedIn ↗
-            </motion.a>
+      <motion.a
+        href="https://www.linkedin.com/in/sonali-mohanty-7b18a7371/"
+        target="_blank"
+        rel="noreferrer"
+        className="contact-link"
+        whileHover={{ y: -3, scale: 1.05 }}
+      >
+        <LinkedInIcon />
+        LinkedIn ↗
+      </motion.a>
 
-            <motion.a
-              href="https://github.com/mohantysonali1228-cpu"
-              target="_blank"
-              rel="noreferrer"
-              style={{
-                display: "inline-flex",
-                alignItems: "center",
-                gap: "8px",
-              }}
-              whileHover={{ y: -3, scale: 1.05 }}
-            >
-              <GitHubIcon />
-              GitHub ↗
-            </motion.a>
-          </div>
-        </motion.div>
-      </section>
+      <motion.a
+        href="https://github.com/mohantysonali1228-cpu"
+        target="_blank"
+        rel="noreferrer"
+        className="contact-link"
+        whileHover={{ y: -3, scale: 1.05 }}
+      >
+        <GitHubIcon />
+        GitHub ↗
+      </motion.a>
+
+    </div>
+  </motion.div>
+</section>
+
 
       {/* ================= 8. FOOTER ================= */}
 
