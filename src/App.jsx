@@ -85,7 +85,7 @@ const ABOUT_STATS = [
     value: "MCA",
     title: "Computer Science",
     subtitle: "GITAM, Bhubaneswar",
-    accent: "#38bdf8",
+    accent: "#74C895",
     icon: GraduationCap,
   },
   {
@@ -93,7 +93,7 @@ const ABOUT_STATS = [
     value: "8.0",
     title: "Current CGPA",
     subtitle: "Academic Excellence",
-    accent: "#38bdf8",
+    accent: "#74C895",
     icon: Award,
   },
   {
@@ -101,7 +101,7 @@ const ABOUT_STATS = [
     value: "2+",
     title: "Internships",
     subtitle: "Python & Data Science",
-    accent: "#38bdf8",
+    accent: "#74C895",
     icon: Code2,
   },
   {
@@ -109,7 +109,7 @@ const ABOUT_STATS = [
     value: "4+",
     title: "Core Projects",
     subtitle: "ML & Web Applications",
-    accent: "#38bdf8",
+    accent: "#74C895",
     icon: BrainCircuit,
   },
 ];
@@ -118,7 +118,7 @@ const ABOUT_FOCUS = [
   {
     number: "01",
     icon: Code2,
-    accent: "#38bdf8",
+    accent: "#74C895",
     title: "Full Stack Development",
     description:
       "Building responsive, high-performance web applications with clean frontend interfaces, Python backend engines, and modular REST APIs.",
@@ -127,7 +127,7 @@ const ABOUT_FOCUS = [
   {
     number: "02",
     icon: Database,
-    accent: "#6366f1",
+    accent: "#74C895",
     title: "Backend & Databases",
     description:
       "Designing robust relational databases with SQL, integrating seamless API endpoints, and managing efficient data pipelines.",
@@ -136,7 +136,7 @@ const ABOUT_FOCUS = [
   {
     number: "03",
     icon: BrainCircuit,
-    accent: "#a855f7",
+    accent: "#74C895",
     title: "Machine Learning & AI",
     description:
       "Developing predictive modeling solutions, passenger survival classifiers, and data analysis pipelines using Python and ML libraries.",
@@ -276,6 +276,7 @@ const PROJECTS_DATA = [
     tech: ["HTML", "Tailwind CSS", "JavaScript", "LocalStorage"],
     image: "/images/Screenshot 2026-11-04 132621.png",
     link: "https://grocery-delivery-website-one.vercel.app/",
+    sourceCode: "https://github.com/mohantysonali1228-cpu/Grocery_-Delivery-_Website-",
   },
   {
     number: "02",
@@ -286,6 +287,7 @@ const PROJECTS_DATA = [
     tech: ["React", "JavaScript", "Tailwind CSS"],
     image: "/images/Screenshot 2026-11-04 131938.png",
     link: "https://animated-biscochitos-b9ee58.netlify.app/",
+    sourceCode: "https://github.com/mohantysonali1228-cpu/Realestic/tree/main/realeaste",
   },
   {
     number: "03",
@@ -296,6 +298,7 @@ const PROJECTS_DATA = [
     tech: ["React", "Node.js", "Express.js", "MongoDB", "AI"],
     image: "/images/Screenshot 2026-11-04 131329.png",
     link: "https://ai-resume-builder-two-beta.vercel.app/",
+    sourceCode: "https://github.com/mohantysonali1228-cpu/Ai-Resume-Builder",
   },
  {
   number: "04",
@@ -313,6 +316,7 @@ const PROJECTS_DATA = [
   ],
   image: "/images/Screenshot 2026-11-11 153732.png",
   link: "https://meesho-shopping-website.vercel.app/",
+  sourceCode: "https://github.com/mohantysonali1228-cpu/Meesho_Shopping_Website",
 },
 ];
 
@@ -541,7 +545,7 @@ function App() {
                 style={{ marginBottom: "1rem", fontWeight: 300 }}
               >
                 I'm an{" "}
-                <span style={{ color: "#38bdf8", fontWeight: 400 }}>
+                <span style={{ color: "#74C895", fontWeight: 400 }}>
                   MCA Computer Science student
                 </span>{" "}
                 interested in Python fullstack development. I enjoy building modern, responsive, and user-friendly web applications. I have a strong interest in Python development, frontend technologies, backend development and databases.
@@ -585,7 +589,7 @@ function App() {
                       gap: "6px",
                     }}
                   >
-                    <MapPin size={14} style={{ color: "#38bdf8" }} />
+                    <MapPin size={14} style={{ color: "#74C895" }} />
                     Bhubaneswar
                   </strong>
                 </div>
@@ -620,7 +624,7 @@ function App() {
                   >
                     <GraduationCap
                       size={14}
-                      style={{ color: "#38bdf8" }}
+                      style={{ color: "#74C895" }}
                     />
                     MCA
                     {/* MCA (2025–27) */}
@@ -655,7 +659,7 @@ function App() {
                       gap: "6px",
                     }}
                   >
-                    <Terminal size={14} style={{ color: "#38bdf8" }} />
+                    <Terminal size={14} style={{ color: "#74C895" }} />
                     Python Full Stack
                   </strong>
                 </div>
@@ -806,7 +810,7 @@ function App() {
                     fontSize: "0.78rem",
                     letterSpacing: "1.5px",
                     fontWeight: 700,
-                    color: "#38bdf8",
+                    color: "#74C895",
                     textTransform: "uppercase",
                   }}
                 >
@@ -1144,8 +1148,8 @@ function App() {
               <div className="experience-year">INTERNSHIP</div>
 
               <div className="experience-content">
-                <div className="experience-tag">DATA SCIENCE INTERN</div>
-                <h3>CodSoft</h3>
+                <div className="experience-tag">AI/ML INTERN</div>
+                <h3>MicroSoft</h3>
                 <p>
                   Worked with data science and machine learning concepts
                   through practical projects and predictive modeling tasks.
@@ -1215,16 +1219,31 @@ function App() {
                   ))}
                 </div>
 
-                <a
-                  href={project.link}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="project-link"
-                >
-                  LIVE DEMO ↗
-                </a>
-              </motion.div>
-            ))}
+                <div className="project-buttons">
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="project-link"
+              >
+              Live Demo ↗
+              </a>
+  
+              <a
+                href={project.sourceCode}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="project-link"
+              >
+              Source Code ↗
+              </a>
+
+ 
+      </div>
+                
+           
+          </motion.div>
+          ))}
           </motion.div>
         </div>
       </section>

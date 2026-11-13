@@ -73,7 +73,7 @@ const About = () => {
     {
       number: "01",
       icon: Code2,
-      accent: "#38bdf8",
+      accent: "#74C895",
       title: "Full Stack Development",
       description:
         "Building responsive, high-performance web applications with clean frontend interfaces, Python backend engines, and modular REST APIs.",
@@ -82,7 +82,7 @@ const About = () => {
     {
       number: "02",
       icon: Database,
-      accent: "#6366f1",
+      accent: "#74C895",
       title: "Backend & Databases",
       description:
         "Designing robust relational databases with SQL, integrating seamless API endpoints, and managing efficient data pipelines.",
@@ -91,7 +91,7 @@ const About = () => {
     {
       number: "03",
       icon: BrainCircuit,
-      accent: "#a855f7",
+      accent: "#74C895",
       title: "Machine Learning & AI",
       description:
         "Developing predictive modeling solutions, passenger survival classifiers, and data analysis pipelines using Python and ML libraries.",
