@@ -488,6 +488,204 @@ img {
 }
 
 
+/* ================= GITHUB ACTIVITY ================= */
+
+.github-section {
+  margin-top: 5rem;
+  width: 100%;
+}
+
+.github-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+  padding-bottom: 1.2rem;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.github-label {
+  color: #74C895;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.github-heading h3 {
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 8px 0;
+}
+
+.github-heading p {
+  color: rgba(255,255,255,0.55);
+  font-size: 0.9rem;
+}
+
+.github-profile-btn {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 11px 17px;
+  color: #74C895;
+  border: 1px solid rgba(116,200,149,0.3);
+  border-radius: 12px;
+  background: rgba(116,200,149,0.06);
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.github-profile-btn:hover {
+  background: rgba(116,200,149,0.15);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(116,200,149,0.12);
+}
+
+/* STATS GRID */
+
+.github-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.github-stat-card,
+.github-contribution-card {
+  position: relative;
+  padding: 25px;
+  background: rgba(255,255,255,0.025);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 20px;
+  backdrop-filter: blur(14px);
+  overflow: hidden;
+  transition: 0.35s ease;
+}
+
+.github-stat-card:hover,
+.github-contribution-card:hover {
+  border-color: rgba(116,200,149,0.5);
+  box-shadow: 0 15px 40px rgba(116,200,149,0.08);
+}
+
+.github-card-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #74C895;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.github-stat-card img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* CONTRIBUTION GRAPH */
+
+.github-contribution-card {
+  margin-top: 22px;
+}
+
+.github-contribution-card p {
+  color: rgba(255,255,255,0.55);
+  font-size: 0.88rem;
+  margin-bottom: 22px;
+}
+
+.contribution-image {
+  width: 100%;
+  overflow-x: auto;
+  padding-bottom: 10px;
+}
+
+.contribution-image img {
+  display: block;
+  width: 100%;
+  min-width: 650px;
+  height: auto;
+  transition: 0.4s ease;
+}
+
+.contribution-image img:hover {
+  transform: scale(1.01);
+}
+
+.github-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+  color: rgba(255,255,255,0.5);
+  font-size: 0.72rem;
+  margin-top: 12px;
+}
+
+.contribution-levels {
+  display: flex;
+  gap: 4px;
+}
+
+.contribution-levels span {
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+  background: #142b1e;
+}
+
+.contribution-levels span:nth-child(2) {
+  background: #285b3e;
+}
+
+.contribution-levels span:nth-child(3) {
+  background: #3c8758;
+}
+
+.contribution-levels span:nth-child(4) {
+  background: #56ad76;
+}
+
+.contribution-levels span:nth-child(5) {
+  background: #74C895;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 768px) {
+  .github-stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .github-heading h3 {
+    font-size: 1.5rem;
+  }
+
+  .github-stat-card,
+  .github-contribution-card {
+    padding: 18px;
+  }
+
+  .github-section {
+    margin-top: 3.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .github-heading {
+    align-items: flex-start;
+  }
+
+  .github-profile-btn {
+    font-size: 0.8rem;
+  }
+}
 /* ================= SKILLS GRID ================= */
 
 .skills-grid {

@@ -957,6 +957,140 @@ function App() {
             </div>
           </div>
         </div>
+
+{/* ================= GITHUB ACTIVITY SECTION ================= */}
+
+<div className="github-section">
+
+  <motion.div
+    initial={{ opacity: 0, y: 30 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true }}
+    transition={{ duration: 0.7 }}
+  >
+    <div className="github-heading">
+      <div>
+        <span className="github-label">
+          CODING & CONTRIBUTIONS
+        </span>
+
+        <h3>My GitHub Journey</h3>
+
+        <p>
+          Every contribution represents a step forward
+          in my development journey.
+        </p>
+      </div>
+
+      <a
+        href="https://github.com/mohantysonali1228-cpu"
+        target="_blank"
+        rel="noreferrer"
+        className="github-profile-btn"
+      >
+        <GitHubIcon />
+        View Profile ↗
+      </a>
+    </div>
+  </motion.div>
+
+  {/* GITHUB STATS GRID */}
+
+  <motion.div
+    className="github-stats-grid"
+    variants={staggerContainer}
+    initial="hidden"
+    whileInView="visible"
+    viewport={{ once: true }}
+  >
+
+    {/* GitHub Stats */}
+
+    <motion.div
+      className="github-stat-card"
+      variants={cardSpring}
+      whileHover={{ y: -7, scale: 1.02 }}
+    >
+      <div className="github-card-title">
+        <Code2 size={19} />
+        <span>GitHub Statistics</span>
+      </div>
+
+      <img
+        src="\public\images\68747470733a2f2f676873746174732e6465762f6170692f636172643f757365726e616d653d6d6f68616e7479736f6e616c69313232382d637075.svg"
+        alt="GitHub Statistics"
+        loading="lazy"
+      />
+    </motion.div>
+
+    {/* GitHub Streak */}
+
+    <motion.div
+      className="github-stat-card"
+      variants={cardSpring}
+      whileHover={{ y: -7, scale: 1.02 }}
+    >
+      <div className="github-card-title">
+        <Terminal size={19} />
+        <span>Coding Streak</span>
+      </div>
+
+      <img
+        src="https://streak-stats.demolab.com?user=mohantysonali1228-cpu&theme=transparent&hide_border=true&ring=74C895&fire=74C895&currStreakLabel=74C895&sideLabels=ffffff&dates=999999"
+        alt="GitHub Contribution Streak"
+        loading="lazy"
+      />
+    </motion.div>
+
+  </motion.div>
+
+  {/* CONTRIBUTION HEATMAP */}
+
+  <motion.div
+    className="github-contribution-card"
+    initial={{ opacity: 0, y: 35 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true }}
+    transition={{ duration: 0.7 }}
+    whileHover={{
+      borderColor: "rgba(116,200,149,0.5)"
+    }}
+  >
+
+    <div className="github-card-title">
+      <Database size={19} />
+      <span>Contribution Activity</span>
+    </div>
+
+    <p>
+      My coding consistency throughout the year.
+    </p>
+
+    <div className="contribution-image">
+      <img
+        src="https://ghchart.rshah.org/74C895/mohantysonali1228-cpu"
+        alt="GitHub Contribution Graph"
+        loading="lazy"
+      />
+    </div>
+
+    <div className="github-bottom">
+      <span>Less</span>
+      <div className="contribution-levels">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <span>More</span>
+    </div>
+
+  </motion.div>
+
+</div>
+
+{/* ================= END GITHUB ACTIVITY ================= */}
       </section>
 
       {/* ================= 3. SKILLS SECTION ================= */}
@@ -966,7 +1100,7 @@ function App() {
         className="section dark-section"
         style={{
           width: "100%",
-          padding: "80px 5%",
+          padding: "80px 7%",
           boxSizing: "border-box",
         }}
       >
