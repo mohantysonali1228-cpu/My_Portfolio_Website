@@ -1004,7 +1004,7 @@ function App() {
     viewport={{ once: true }}
   >
 
-    {/* GitHub Stats */}
+    {/* GitHub Stats
 
     <motion.div
       className="github-stat-card"
@@ -1021,7 +1021,7 @@ function App() {
         alt="GitHub Statistics"
         loading="lazy"
       />
-    </motion.div>
+    </motion.div> */}
 
     {/* GitHub Streak */}
 
